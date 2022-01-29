@@ -11,8 +11,7 @@
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 
-
-<AnchorPane opacity="0.39" prefHeight="175.0" prefWidth="598.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane opacity="0.39" prefHeight="175.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentFormController">
    <children>
       <GridPane layoutX="49.0" layoutY="18.0" prefHeight="123.0" prefWidth="421.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="18.0">
         <columnConstraints>
@@ -28,9 +27,9 @@
          <children>
             <Label text="Id" />
             <Label text="Name" GridPane.rowIndex="1" />
-            <TextField editable="false" GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <TextField fx:id="txId" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="labelErrorName" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <textFill>
                   <RadialGradient centerX="0.3888888888888889" centerY="0.5" radius="0.27906976744186046">
                      <stops>
@@ -45,8 +44,8 @@
             </Label>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Button mnemonicParsing="false" text="Save" />
-                  <Button mnemonicParsing="false" text="Cancel" />
+                  <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSaveAction" text="Save" />
+                  <Button fx:id="btCancel" mnemonicParsing="false" onAction="#onBtCancelAction" text="Cancel" />
                </children>
             </HBox>
          </children>
